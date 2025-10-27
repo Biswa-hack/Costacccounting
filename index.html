@@ -1,201 +1,34 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CMA Tapas Bhattachryya — Cost, Tax & Financial Advisory</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
   <style>
-    :root {
-      --bg: #fffaf2;
-      --accent: #ff9933;
-      --accent-2: #ffd699;
-      --text: #222;
-      --muted: #6b7280;
-      --radius: 16px;
-      --green: #25D366;
-    }
-    * { box-sizing: border-box; }
     body {
-      margin: 0;
-      font-family: Inter, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      overflow-x: hidden;
-    }
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 10%;
-      background: linear-gradient(90deg, var(--accent), var(--accent-2));
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .logo { font-size: 22px; font-weight: 800; }
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 20px;
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
+      background: #f5f5f5;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #222; }
 
-    /* Hero Section */
-    .hero {
-      position: relative;
-      height: 90vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      overflow: hidden;
-    }
-    .hero-slide {
-      position: absolute;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      object-fit: cover;
-      filter: brightness(0.6);
-      opacity: 0;
-      transition: opacity 2s ease;
-    }
-    .hero-slide.active { opacity: 1; }
-    .hero-caption {
-      position: absolute;
-      bottom: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      text-align: center;
-      background: rgba(0, 0, 0, 0.5);
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-size: 20px;
-      color: #fff;
-      opacity: 0;
-      transition: opacity 1s ease;
-    }
-    .hero-caption.active { opacity: 1; }
-    .hero-content {
-      position: relative;
-      text-align: center;
-      z-index: 10;
-      max-width: 800px;
-      animation: fadeUp 2s ease forwards;
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    .hero-content h1 { font-size: 44px; margin-bottom: 16px; }
-    .hero-content p { font-size: 18px; color: #f3f3f3; }
-    .btn-primary {
-      background: white;
-      color: var(--accent);
-      padding: 12px 22px;
-      border-radius: 8px;
-      font-weight: 700;
-      text-decoration: none;
-      margin-top: 20px;
-      display: inline-block;
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-    .btn-primary:hover {
-      transform: scale(1.05);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-    }
-    section {
-      padding: 60px 10%;
-      animation: fadeUp 1.5s ease forwards;
-    }
-    h2 { text-align: center; color: var(--accent); margin-bottom: 30px; }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: var(--radius);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-      padding: 20px;
-      text-align: center;
-      transition: transform 0.4s, box-shadow 0.4s;
-    }
-    .card:hover { transform: translateY(-10px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-      border-radius: 12px;
-      margin-bottom: 12px;
-    }
-    .action-buttons a {
-      display: block;
-      margin: 8px auto;
-      padding: 10px 15px;
-      border-radius: 6px;
-      text-decoration: none;
-      color: white;
-      font-weight: 600;
-      width: 70%;
-    }
-    .whatsapp-btn { background: var(--green); }
-    .call-btn { background: var(--accent); }
-    .action-buttons a:hover { opacity: 0.9; }
-    .fade { opacity: 0; transform: translateY(20px); transition: all 0.8s ease; }
-    .fade.in { opacity: 1; transform: translateY(0); }
     footer {
-      background: var(--accent);
+      background: #222;
       color: white;
       text-align: center;
-      padding: 16px 0;
-      font-size: 14px;
+      padding: 20px 0;
+      padding-bottom: 100px; /* 👈 adds space above floating clientele */
     }
 
-    /* Floating Buttons */
-    .floating-btn {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      z-index: 10000;
-    }
-    .floating-btn a {
-      width: 55px;
-      height: 55px;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-decoration: none;
-      font-size: 24px;
-      animation: pulse 2s infinite;
-    }
-    .floating-whatsapp { background: var(--green); }
-    .floating-call { background: var(--accent); }
-    @keyframes pulse {
-      0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0.3); }
-      70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(0,0,0,0); }
-      100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,0,0,0); }
+    footer p {
+      margin: 5px 0;
     }
 
-    /* Floating Client Slider */
+    /* Floating Clientele Slider */
     .client-floating {
       position: fixed;
-      bottom: 85px;
+      bottom: 120px; /* 👈 raised so it doesn’t cover WhatsApp/email */
       left: 50%;
       transform: translateX(-50%);
       background: white;
@@ -205,14 +38,20 @@
       max-width: 900px;
       overflow: hidden;
       z-index: 9000;
-      padding: 10px 0;
+      padding: 8px 0;
     }
-    .client-slider { overflow: hidden; position: relative; }
+
+    .client-slider {
+      overflow: hidden;
+      position: relative;
+    }
+
     .slide-track {
       display: flex;
       width: calc(250px * 10);
       animation: scroll 25s linear infinite;
     }
+
     .slide {
       height: 60px;
       width: 150px;
@@ -221,79 +60,34 @@
       justify-content: center;
       margin: 0 15px;
     }
+
     .slide img {
       height: 45px;
       object-fit: contain;
       filter: grayscale(100%);
       transition: filter 0.3s;
     }
-    .slide img:hover { filter: grayscale(0%); }
+
+    .slide img:hover {
+      filter: grayscale(0%);
+    }
+
     @keyframes scroll {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
     }
   </style>
 </head>
+
 <body>
-  <header>
-    <div class="logo">CMA Tapas Bhattachryya</div>
-    <nav>
-      <ul>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#pricing">Pricing</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <section class="hero">
-    <img class="hero-slide active" src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1500&auto=format&fit=crop" alt="slide1">
-    <img class="hero-slide" src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?q=80&w=1500&auto=format&fit=crop" alt="slide2">
-    <img class="hero-slide" src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1500&auto=format&fit=crop" alt="slide3">
-    <div id="hero-captions">
-      <div class="hero-caption active">Expert in GST, Tax, and Compliance</div>
-      <div class="hero-caption">Trusted Financial Advisory</div>
-      <div class="hero-caption">Accurate Cost & Audit Solutions</div>
-      <div class="hero-caption">Valuation & Restructuring Support</div>
-    </div>
-    <div class="hero-content">
-      <h1>Smart Financial & Cost Advisory</h1>
-      <p>We simplify finance with accuracy, clarity, and integrity — helping your business grow sustainably.</p>
-      <a href="#services" class="btn-primary">Explore Services</a>
-    </div>
+  <!-- Main content here -->
+  <section style="padding:40px; text-align:center;">
+    <h1>Welcome to CMA Tapas Bhattachryya & Associates</h1>
+    <p>Expert in Cost, Tax & Financial Advisory Services</p>
   </section>
 
-  <section id="services">
-    <h2>Our Core Services</h2>
-    <div class="grid">
-      <div class="card fade"><img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=800&auto=format&fit=crop"><h3>GST & Compliance</h3><p>End-to-end GST return filing, audit assistance, and litigation support.</p></div>
-      <div class="card fade"><img src="https://images.unsplash.com/photo-1559526324-593bc073d938?q=80&w=800&auto=format&fit=crop"><h3>Tax & Audit</h3><p>Comprehensive tax audit and ITR filing for individuals and corporates.</p></div>
-      <div class="card fade"><img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe?q=80&w=800&auto=format&fit=crop"><h3>Valuation</h3><p>Accurate business and asset valuation services to support growth decisions.</p></div>
-      <div class="card fade"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=800&auto=format&fit=crop"><h3>Company Incorporation & ROC</h3><p>Company setup, ROC filings, and compliance management.</p></div>
-    </div>
-  </section>
-
-  <section id="pricing">
-    <h2>Our Plans</h2>
-    <div class="grid">
-      <div class="card fade"><h3>Starter</h3><p>Ideal for startups and small businesses.</p><h4>₹7,999</h4></div>
-      <div class="card fade"><h3>Enterprise</h3><p>Customised solutions with complete support.</p><h4>Custom</h4></div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="grid">
-      <div class="card fade"><h3>WhatsApp</h3><p>+91 70034 06653</p></div>
-      <div class="card fade"><h3>Email</h3><p>shankar@example.com</p></div      
-    </div>
-
-
-
-    
-  </section>
-
-  <!-- Floating Client Logos -->
+  <!-- Floating Clientele Slider -->
   <div class="client-floating">
     <div class="client-slider">
       <div class="slide-track">
@@ -302,7 +96,8 @@
         <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/en/0/09/Hindustan_Copper_Limited_logo.png" alt="Hindustan Copper"></div>
         <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/en/1/1f/Tata_logo.svg" alt="TATA"></div>
         <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/en/7/74/Maco_logo.png" alt="MACO"></div>
-        <!-- duplicate for loop -->
+        
+        <!-- Duplicate slides for seamless loop -->
         <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/en/1/1a/WBSEDCL_Logo.png" alt="WBSEDCL"></div>
         <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/en/f/f0/Damodar_Valley_Corporation_Logo.png" alt="DVC"></div>
         <div class="slide"><img src="https://upload.wikimedia.org/wikipedia/en/0/09/Hindustan_Copper_Limited_logo.png" alt="Hindustan Copper"></div>
@@ -312,34 +107,12 @@
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
-    © <span id="year"></span> CMA Tapas Bhattachryya — All Rights Reserved.
+    <p>📞 +91 98765 43210 | ✉️ info@cma-tapas.com</p>
+    <p>Contact Us</p>
+    <p>All Rights Reserved © 2025 CMA Tapas Bhattachryya & Associates</p>
   </footer>
 
-  <!-- Floating WhatsApp and Call Buttons -->
-  <div class="floating-btn">
-    <a href="https://wa.me/917003406653" target="_blank" class="floating-whatsapp">💬</a>
-    <a href="tel:+917003406653" class="floating-call">📞</a>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in'); });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.fade').forEach(el => observer.observe(el));
-
-    const slides = document.querySelectorAll('.hero-slide');
-    const captions = document.querySelectorAll('.hero-caption');
-    let current = 0;
-    function nextSlide() {
-      slides[current].classList.remove('active');
-      captions[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-      captions[current].classList.add('active');
-    }
-    setInterval(nextSlide, 5000);
-  </script>
 </body>
 </html>
