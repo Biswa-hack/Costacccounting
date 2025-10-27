@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TAPAS BHATTACHARYYA — FCMA, CA, LLB</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #fffaf2;
+      --accent: #ff9933;
+      --accent-2: #ffd699;
+      --text: #222;
+      --muted: #6b7280;
+      --radius: 14px;
+      --green: #25D366;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: Inter, system-ui, sans-serif; background: var(--bg); color: var(--text); }
+    .container { max-width: 1200px; margin: auto; padding: 20px; }
+
+    header { display: flex; justify-content: space-between; align-items: center; padding: 20px 0; }
+    .brand { display: flex; align-items: center; gap: 10px; }
+    .logo img { width: 70px; height: 70px; border-radius: 50%; object-fit: cover; border: 3px solid var(--accent); }
+    nav a { background: linear-gradient(90deg, var(--accent), var(--accent-2)); color: white; padding: 8px 14px; border-radius: 10px; text-decoration: none; margin: 0 5px; font-weight: 600; }
+    nav a:hover { opacity: 0.9; }
+
+    .intro { display: grid; grid-template-columns: 280px 1fr; gap: 20px; }
+    .profile { background: white; border-radius: 12px; padding: 16px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); }
+    .profile-photo img { width: 100%; height: 250px; border-radius: 10px; object-fit: cover; }
+    .contact-info p { margin: 8px 0; font-size: 14px; }
+    .btn { display: inline-block; padding: 8px 14px; border-radius: 8px; color: white; text-decoration: none; font-weight: 600; margin: 5px; }
+    .btn-wa { background: var(--green); }
+    .btn-call { background: var(--accent); }
+
+    section { background: white; border-radius: 12px; padding: 20px; margin-top: 20px; box-shadow: 0 8px 25px rgba(0,0,0,0.05); }
+    h2 { color: var(--accent); }
+    h3 { color: var(--accent-2); }
+
+    ul { padding-left: 20px; }
+
+    .exp-item { margin-bottom: 14px; }
+    .exp-item h4 { margin: 0; color: var(--accent); }
+    .exp-item p { margin: 4px 0; }
+
+    .clientele-ribbon { position: fixed; left: 0; right: 0; bottom: 0; background: #fff; border-top: 3px solid var(--accent); z-index: 1000; padding: 8px; box-shadow: 0 -4px 20px rgba(0,0,0,0.1); }
+    .clientele-title { text-align: center; color: var(--accent); font-weight: 800; margin-bottom: 5px; }
+    .clientele-track { display: flex; gap: 20px; overflow: hidden; animation: scroll 35s linear infinite; align-items: center; }
+    .clientele-track:hover { animation-play-state: paused; }
+    .client-item { display: flex; flex-direction: column; align-items: center; min-width: 120px; }
+    .client-item img { width: 90px; height: 50px; object-fit: contain; }
+    .client-name { font-size: 13px; margin-top: 4px; font-weight: 600; }
+
+    @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+    .floating { position: fixed; right: 16px; bottom: 80px; display: flex; flex-direction: column; gap: 10px; z-index: 1200; }
+    .floating a { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; color: white; text-decoration: none; }
+    .floating .wa { background: var(--green); }
+    .floating .cl { background: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo"><img src="images/TB.jpg" alt="Tapas Bhattacharyya"></div>
+        <div>
+          <h1>TAPAS BHATTACHARYYA</h1>
+          <p>FCMA, CA, LLB, M.Com, B.Com (H)</p>
+        </div>
+      </div>
+      <nav>
+        <a href="#profile">Profile</a>
+        <a href="#experience">Experience</a>
+        <a href="#academics">Academics</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <div class="intro" id="profile">
+      <div class="profile">
+        <div class="profile-photo"><img src="images/TB.jpg" alt="Tapas Bhattacharyya"></div>
+        <div class="contact-info">
+          <p><strong>Mobile:</strong> 9830091382 / 9073012584</p>
+          <p><strong>Email:</strong> cmatapasbhattacharyya12@gmail.com</p>
+          <a href="https://wa.me/919830091382" target="_blank" class="btn btn-wa">WhatsApp</a>
+          <a href="tel:+919830091382" class="btn btn-call">Call</a>
+        </div>
+      </div>
+      <div>
+        <section>
+          <h2>Professional Profile</h2>
+          <p>Senior Finance Professional with extensive experience in audit, taxation, costing, compliance, and financial management. Over three decades of expertise in providing consultancy and assurance services to corporate and government organizations. Recognized for leadership, analytical acumen, and commitment to professional excellence.</p>
+          <h3>Core Competencies</h3>
+          <ul>
+            <li>Statutory, Internal, Cost, and GST Audits</li>
+            <li>Direct and Indirect Taxation Consultancy</li>
+            <li>Financial Planning and Control Systems</li>
+            <li>Costing System Implementation and Analysis</li>
+            <li>Project Evaluation and Cost Optimization</li>
+            <li>Legal and Regulatory Compliance</li>
+            <li>Business Process Review and Risk Management</li>
+          </ul>
+        </section>
+      </div>
+    </div>
+
+    <section id="experience">
+      <h2>Professional Experience</h2>
+      <div class="exp-item">
+        <h4>Exertive Management Consultancy Services LLP, Kolkata — Designated Partner</h4>
+        <p><em>July 2010 – Present</em></p>
+        <p>Leading consultancy assignments in taxation, audit, valuation, and compliance for reputed Government and Private Sector clients across India.</p>
+        <ul>
+          <li>Hindustan Copper Ltd. — GST Auditor, Asset Valuer (2022–2024)</li>
+          <li>WBSEDCL — Internal Auditor, Team Leader (2018–2019; 2025–ongoing)</li>
+          <li>WBSETCL — Direct Tax Consultant (2023)</li>
+          <li>NBCC, WBMSC, Shivam Meltech Ltd. — Cost and Internal Audits</li>
+          <li>Eastern Coalfields Ltd. — Internal Auditor (2011–2012)</li>
+        </ul>
+      </div>
+      <div class="exp-item">
+        <h4>Portend Real Estate Pvt. Ltd., Kolkata — Financial Advisor</h4>
+        <p><em>April 2012 – April 2014</em></p>
+        <p>Handled Finalization of Accounts, Service Tax, VAT, Legal Matters, and Financial Planning.</p>
+      </div>
+      <div class="exp-item">
+        <h4>Imperial Tubes Pvt. Ltd. — Manager (Finance)</h4>
+        <p><em>January 2007 – May 2011</em></p>
+        <p>Finalization of Accounts, Excise, VAT, Legal and Statutory Matters, and Tax Compliance.</p>
+      </div>
+      <div class="exp-item">
+        <h4>Earlier Roles</h4>
+        <p><em>Lift & Shift Services, A.K.S. & Associates, Century Laminating Co. Ltd., AVA Trading Co.</em></p>
+      </div>
+    </section>
+
+    <section id="academics">
+      <h2>Academic Credentials</h2>
+      <ul>
+        <li>Cost & Management Accountant (FCMA) — The Institute of Cost Accountants of India</li>
+        <li>Chartered Accountant (CA) — The Institute of Chartered Accountants of India</li>
+        <li>LLB — University of Calcutta</li>
+        <li>M.Com — University of Calcutta</li>
+        <li>B.Com (Hons.) — University of Calcutta (National Scholarship Awardee)</li>
+      </ul>
+
+      <h3>Professional Engagements & Contributions</h3>
+      <ul>
+        <li>Ex-Chairman, ICAI Howrah Chapter (2013–2014)</li>
+        <li>Examiner, ICAI (2023–Present)</li>
+        <li>Resource Person, SEBI (2015)</li>
+        <li>Honorary Faculty, EIRC of ICAI & Senior Lecturer, ICAI Howrah Chapter</li>
+        <li>Ex-Lecturer, HP University (M.Com, 2001–2003)</li>
+        <li>Speaker at national and regional seminars on GST, Internal Audit, Taxation, Companies Act, and Risk Management</li>
+      </ul>
+    </section>
+
+    <section id="skills">
+      <h2>Technical Skills & Strengths</h2>
+      <ul>
+        <li><strong>Operating Systems:</strong> Windows 7 and above</li>
+        <li><strong>Applications:</strong> MS Office, Advanced Excel</li>
+        <li><strong>Accounting Software:</strong> SAP, Tally, Other ERP</li>
+        <li>Strong analytical and problem-solving abilities</li>
+        <li>Leadership and mentoring capabilities</li>
+        <li>Excellent communication and presentation skills</li>
+        <li>Commitment to ethical and transparent professional practices</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Information</h2>
+      <p><strong>Address:</strong> Kolkata, West Bengal</p>
+      <p><strong>Email:</strong> cmatapasbhattacharyya12@gmail.com</p>
+      <p><strong>Mobile:</strong> 9830091382 / 9073012584</p>
+    </section>
+  </div>
+
+  <div class="clientele-ribbon">
+    <div class="clientele-title">Our Honorarium Clients</div>
+    <div class="clientele-track">
+      <div class="client-item"><img src="images/client-wbsedcl.png" alt="WBSEDCL"><div class="client-name">WBSEDCL</div></div>
+      <div class="client-item"><img src="images/client-hindcopper.png" alt="Hindustan Copper"><div class="client-name">Hindustan Copper Ltd</div></div>
+      <div class="client-item"><img src="images/client-coalindia.png" alt="Coal India"><div class="client-name">Coal India</div></div>
+      <div class="client-item"><img src="images/client-dvc.png" alt="DVC"><div class="client-name">DVC</div></div>
+      <div class="client-item"><img src="images/client-wbmsc.png" alt="WBMSC"><div class="client-name">WBMSC</div></div>
+      <div class="client-item"><img src="images/client-govt.png" alt="Other Govt"><div class="client-name">Other Government Bodies</div></div>
+    </div>
+  </div>
+
+  <div class="floating">
+    <a class="wa" href="https://wa.me/919830091382" target="_blank">💬</a>
+    <a class="cl" href="tel:+919830091382">📞</a>
+  </div>
+</body>
+</html>
